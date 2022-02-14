@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet"> 
+
+
+  
+  <title>Frontend Mentor | 3-column preview card component</title>
+
+  <style>
+    @media screen and (max-width: 375px) {
+      *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      padding: 23vw 7vw;
+      font-family: "lexend deca";
+      color: hsla(0, 0%, 100%, 0.75);
+      background-color:  hsl(0, 0%, 95%);
+    }
+    .SEDANS{
+      width: 86vw;
+      height: 118vw;
+      padding: 13vw;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      background-color: hsl(31, 77%, 52%);
+    }
+    .img{
+      margin-bottom: 10vw;
+    }
+    h1{
+      text-transform: uppercase;
+      font-size: 35px;
+      color:  hsl(0, 0%, 95%);
+      margin-bottom: 10vw;
+      font-family: "Big Shoulders Display";
+    }
+    p{
+      margin-bottom: 7vw;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+    .button{
+      width: 40vw;
+      height: 13vw;
+      color: hsl(31, 77%, 52%);
+      text-transform: capitalize;
+      display: grid;
+      align-content: center;
+      text-align: center;
+      border: none;
+      border-radius: 30px;
+      background-color:  hsl(0, 0%, 95%);
+    }
+    .button:hover{
+      background-color: transparent;
+      border: 1px solid hsl(0, 0%, 95%);
+      color: hsl(0, 0%, 95%);
+    }
+    .SUVS{
+      width: 86vw;
+      height: 118vw;
+      padding: 13vw;
+      background-color: hsl(184, 100%, 22%);
+    }
+    .SUVS button{
+      color: hsl(184, 100%, 22%);
+    }
+    .LUXURY{
+      width: 86vw;
+      height: 118vw;
+      padding: 13vw;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      background-color: hsl(179, 100%, 13%);
+    }
+    .LUXURY button{
+      color: hsl(179, 100%, 13%);
+    }
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    }
+
+    @media screen and (max-width: 1440px) and (min-width: 376px) {
+       *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      padding: 12vw 18vw;
+      font-family: "lexend deca";
+      font-size: 15px;
+      color: hsla(0, 0%, 100%, 0.75);
+      background-color: hsl(0, 0%, 95%);
+    }
+    .SEDANS{
+      float: left;
+      width: 21vw;
+      height: 35vw;
+      padding-left: 3vw;
+      padding-right: 3vw;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      background-color:  hsl(31, 77%, 52%);
+    }
+    .img{
+      height: 3vw;
+      margin-top: 3vw;
+      margin-bottom: 3vw;
+    }
+    .img img{
+      height: 100%;
+    }
+    .h1{
+      height: 3vw;
+      margin-bottom: 3vw;
+    }
+    h1{
+      text-transform: uppercase;
+      font-size: 33px;
+      height: 100%;
+      font-family: "Big Shoulders Display";
+      font-weight: bold;
+      color: hsl(0, 0%, 95%);
+    }
+    .SEDANS .pa{
+      height: 8vw;
+      width: 14vw;
+      margin-bottom: 6vw;
+    }
+    p{
+      height: 100%;
+      width: 100%;
+      line-height: 1.6;
+    }
+   .button{
+      width: 10vw;
+      height: 3vw;
+      margin-bottom: 3vw;
+      color: hsl(31, 77%, 52%);
+      font-size: 15px;
+      text-transform: capitalize;
+      display: grid;
+      align-content: center;
+      text-align: center;
+      border: none;
+      border-radius: 30px;
+      background-color:  hsl(0, 0%, 95%);
+    }
+      button:hover{
+      background-color: transparent;
+      border: 1px solid hsl(0, 0%, 95%);
+      color: hsl(0, 0%, 95%);
+    }
+    .SUVS{
+      float: left;
+      width: 21vw;
+      height: 35vw;
+      padding-left: 3vw;
+      padding-right: 3vw;
+      background-color:  hsl(184, 100%, 22%);
+    }
+    .SUVS .pa{
+      height: 8vw;
+      width: 14.4vw;
+      margin-bottom: 6vw;
+    }
+    .SUVS .button{
+      color:  hsl(184, 100%, 22%);
+    }
+    .SUVS .button:hover{
+      background-color: transparent;
+      border: 1px solid hsl(0, 0%, 95%);
+      color: hsl(0, 0%, 95%);
+    }
+    .break{
+      break-after: always;
+    }
+    .LUXURY{
+      float: left;
+      width: 21vw;
+      height: 35vw;
+      padding-left: 3vw;
+      padding-right: 3vw;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      background-color: hsl(179, 100%, 13%);
+    }
+    .LUXURY .pa{
+      height: 8vw;
+      width: 15vw;
+      margin-bottom: 6vw;
+    }
+    .LUXURY .button{
+      color:  hsl(179, 100%, 13%);
+    }
+     .LUXURY .button:hover{
+      background-color: transparent;
+      border: 1px solid hsl(0, 0%, 95%);
+      color: hsl(0, 0%, 95%);
+    }
+  }
+  </style>
+</head>
+<body>
+  <div class="SEDANS"> 
+    <div class="img"> <img src="icon-sedans.svg" alt="sedan">  </div>
+   <div class="h1"> <h1> SEDANS </h1> </div>
+    <div class="pa"> <p> Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city or on your next road trip. </p> </div>
+    <button type="button" class="button"> learn more </button>
+  </div>
+
+  <div class="SUVS">
+    <div class="img"> <img src="icon-suvs.svg" alt="suvs">  </div>
+    <div class="h1"> <h1> SUVS </h1> </div>
+    <div class="pa"> <P> Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation and off-road adventures. </P></div>
+    <button type="button" class="button"> learn more </button>
+  </div>
+  
+  <div class="LUXURY">
+    <div class="img"> <img src="icon-luxury.svg" alt="luxury">  </div>
+    <div class="h1"> <h1> LUXURY </h1> </div>
+    <div class="pa"><p>  Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury rental and arrive in style. </p></div>
+    <button type="button" class="button"> learn more </button>
+  </div>
+        
+  
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">smart</a>.
+  </div>
+</body>
+</html>
